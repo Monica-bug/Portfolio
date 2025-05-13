@@ -3,15 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Om mig</title>
+    <title>Min Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
+  <script>
+    const toggleButton = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    toggleButton.addEventListener("click", () => {
+      menu.classList.toggle("show");
+      toggleButton.classList.toggle("active");
+    });
+  </script>
   <body>
     <header>
-      <h1>Om mig</h1>
+      <h1>Velkommen</h1>
       <nav>
-        </button>
         <ul class="menu">
           <li><a href="index.html">Forside</a></li>
           <li><a href="om_mig.html">Om mig</a></li>
@@ -22,11 +33,70 @@
     </header>
 
     <main>
+      <!-- Her indsætter du projekt-gridden: -->
+      <section class="project-grid">
+        <div class="project-card">
+          <img src="images/projekt1.jpg" alt="Projekt 1" />
+          <div class="project-overlay">
+            <h3>Projekt 1</h3>
+            <p>Responsivt website</p>
+          </div>
+        </div>
 
+        <div class="project-card">
+          <img src="images/projekt2.jpg" alt="Projekt 2" />
+          <div class="project-overlay">
+            <h3>Projekt 2</h3>
+            <p>Animation og formidling</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/projekt3.jpg" alt="Projekt 3" />
+          <div class="project-overlay">
+            <h3>Projekt 3</h3>
+            <p>UX-research og test</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/projekt4.jpg" alt="Projekt 4" />
+          <div class="project-overlay">
+            <h3>Projekt 4</h3>
+            <p>Interaktivt spil</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/projekt5.jpg" alt="Projekt 5" />
+          <div class="project-overlay">
+            <h3>Projekt 5</h3>
+            <p>Video og storytelling</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/projekt6.jpg" alt="Projekt 6" />
+          <div class="project-overlay">
+            <h3>Projekt 6</h3>
+            <p>Branding og grafisk design</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Monica Rosenlund Mogensen – Portfolio</p>
+      <p>&copy; 2025 Monica Rosenlund Mogensen</p>
+      <div class="sociale-ikoner">
+        <a
+          href="https://www.instagram.com/mogensen1990?igsh=MWYycDRuMGVqNTRncQ=="
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
     </footer>
   </body>
 </html>
+s
