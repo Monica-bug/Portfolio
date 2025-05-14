@@ -209,3 +209,8 @@ button:hover {
   height: auto;
   display: block;
 }
+
+.billed-container {
+  text-align: center;
+  max-width: 300px;
+}
