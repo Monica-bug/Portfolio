@@ -1,16 +1,67 @@
-/* Grundopsætning */
-body {
-  font-family: Arial, Helvetica, sans-serif;
+
+/*1. Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+
+/*  Base */
+* {
   margin: 0;
-  background-color: #fffffd;
-  color: #000001;
-  padding: 1em;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #333;
+  background-color: #fffffd;
+  line-height: 1.6;
+  padding: 1em;
+}
+/* 3. Typografi */
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Struktur og sektioner */
 header,
 footer {
   background-color: #fffffd;
-  color: #00000;
+  color: #000001;
   text-align: center;
   padding: 1em 0;
 }
@@ -29,9 +80,10 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation */
+/* Navigation*/
 nav {
-  background: color #f;;
+  background-color: #f5f5f5;
+  padding: 0.5em 0;
 }
 
 .menu {
@@ -60,21 +112,8 @@ nav {
   color: white;
 }
 
-/* Formular */
-form {
-  background-color: #f8f4f4;
-  padding: 1em;
-  max-width: 500px;
-  margin: 1em auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-input,
-textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin: 0.3em 0 1em 0;
-  border: 1px solid #ccc;
+/* Projekter – Grid layout */
 
 .project-grid {
   display: grid;
@@ -91,50 +130,128 @@ textarea {
 }
 
 .project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  width: 100
+/* Kontaktformular – styling */
+
+.kontakt form {
+  background-color: #ffffff;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.85);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-align: center;
-  padding: 1rem;
-}
-
-.project-card:hover img {
-  transform: scale(1.05);
-  filter: blur(3px);
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-/* Gælder hele siden */
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Overskrifter */
-h1, h2, h3 {
+.kontakt form h2 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 0.5em;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.kontakt label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.kontakt input,
+.kontakt textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fdfdfd;
+}
+
+.kontakt input:focus,
+.kontakt textarea:focus {
+  border-color: #c65ca5;
+  outline: none;
+}
+
+.kontakt button {
+  background-color: #c65ca5;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: block;
+  margin: 1rem auto 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.kontakt button:hover {
+  background-color: #a54e88;
+}
+.kontakt-form {
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.kontakt-form h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-felt {
+  margin-bottom: 1.5rem;
+}
+
+.form-felt label {
+  display: block;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.form-felt input,
+.form-felt textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+.form-felt input:focus,
+.form-felt textarea:focus {
+  border-color: #c65ca5;
+  outline: none;
+}
+
+.kontakt-form button {
+  background-color: #c65ca5;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+.kontakt-form button:hover {
+  background-color: #a54e88;
 }
