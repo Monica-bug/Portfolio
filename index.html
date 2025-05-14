@@ -14,15 +14,7 @@
       rel="stylesheet"
     />
   </head>
-  <script>
-    const toggleButton = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
 
-    toggleButton.addEventListener("click", () => {
-      menu.classList.toggle("show");
-      toggleButton.classList.toggle("active");
-    });
-  </script>
   <body>
     <header>
       <h1>Velkommen</h1>
@@ -35,6 +27,13 @@
         </ul>
       </nav>
     </header>
+
+    <section class="hero-animation">
+      <video autoplay muted loop playsinline>
+        <source src="img/Film til hjemmeside (1).mp4" type="video/mp4" />
+        Din browser understøtter ikke videoen.
+      </video>
+    </section>
 
     <main>
       <section id="om-mig" class="intro">
