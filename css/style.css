@@ -113,6 +113,12 @@ nav {
   color: white;
 }
 
+/* nav aktiv side*/
+.menu a.active {
+  background-color: #c65ca5;
+  color: white;
+}
+
 /*  Projekter – Grid layout */
 .project-grid {
   display: grid;
@@ -262,7 +268,40 @@ button:hover {
   max-width: 200px;
   border-radius: 8px;
 }
-.menu a.active {
+
+.cta-knap {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
   background-color: #c65ca5;
   color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-knap:hover {
+  background-color: #ffffff;
+  color: #000001;
+  border: 2px solid #c65ca5;
+}
+.program-logoer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.logo-grid img {
+  max-width: 160px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
