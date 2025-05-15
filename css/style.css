@@ -28,7 +28,7 @@ h3 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -199,8 +199,8 @@ button {
 }
 
 button:hover {
-  background-color: #f7f7f7;
-  color: #000001;
+  background-color: #FFCF00;
+  color: #c65ca5;
   border: 2px solid #c65ca5;
 }
 
@@ -282,9 +282,9 @@ button:hover {
 }
 
 .cta-knap:hover {
-  background-color: #ffffff;
-  color: #000001;
-  border: 2px solid #c65ca5;
+  background-color: #FFCF00;
+  color: #c65ca5;
+  
 }
 .program-logoer {
   margin-top: 2rem;
