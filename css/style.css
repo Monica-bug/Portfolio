@@ -12,7 +12,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #333;
-  background-color: #62625e;
+  background-color: #212120;
   line-height: 1.6;
   padding: 1em;
   padding-top: 100px;
@@ -61,13 +61,13 @@ a:hover {
 
 /* Struktur og sektioner */
 header{
-  background-color: #62625e;
-  color: #ececf4;
+  background-color: #212120;
+  color: #212120;
   text-align: center;
   padding: 1em 0;
 }
 footer{
-  background-color: #62625e;
+  background-color: #212120;
   color: #ececf4;
   text-align: center;
   padding: 1em 0;
@@ -103,7 +103,7 @@ main {
 
 /*  Navigation */
 nav {
-  background-color: #62625e;
+  background-color: #212120;
   padding: 0.5em 0;
   position: fixed;
   top: 0;
@@ -235,7 +235,7 @@ button:hover {
   max-width: 300px;
 }
 .om-mig {
-  background-color: #fffffd;
+  background-color: #212120;
   padding: 2rem;
   display: flex;
   justify-content: center;
