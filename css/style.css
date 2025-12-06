@@ -94,7 +94,7 @@ main {
 
 .intro,
 .projekter {
-  background-color: #f8f6f4;
+  background-color: #ececf4;
   padding: 1em;
   margin: 1em auto;
   max-width: 800px;
@@ -312,7 +312,7 @@ button:hover {
 }
 
 .creative-intro {
-  background-color: #ffffff;
+  background-color: #f8f6f4;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
