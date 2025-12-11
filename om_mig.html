@@ -15,12 +15,14 @@
 
   </head>
   <body>
-    
+
 <header>
   <nav class="navbar">
     <a href="index.html" class="logo">
       <img src="img/logohvid.png" alt="Mogensen Design logo">
     </a>
+
+      <div class="burger" onclick="toggleMenu()">☰</div>
 
     <ul class="menu">
       <li><a href="index.html" class="active">Forside</a></li>
@@ -69,6 +71,11 @@
   </div>
 
     </footer>
+    <script>
+function toggleMenu() {
+  document.querySelector('.menu').classList.toggle('show');
+}
+</script>
 
   </body>
 </html>
