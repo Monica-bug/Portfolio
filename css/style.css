@@ -92,14 +92,6 @@ main {
  padding-bottom: 1em;
 }
 
-.intro {
-  background-color: #ececf4;
-  padding: 1em;
-  margin: 1em auto;
-  max-width: 800px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 /*  Navigation */
 
 .logo img {
@@ -152,6 +144,20 @@ nav {
   background-color: #5b2a3a;
   color: #f8f6f4;
 }
+/* Standard: menu synlig */
+.menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+/* Burger ikon: kun synlig på mobil */
+.burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f8f6f4;
+}
 
 .burger {
   display: none;
@@ -193,9 +199,10 @@ nav {
 }
 
 .project__images img {
-  max-width: 280px;
+  max-width: 250px;
   width: 100%;
   border-radius: 8px;
+  object-fit: contain
 }
 
 form {
@@ -280,50 +287,63 @@ textarea {
   border-radius: 8px;
 }
 
-.intro__image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.intro__content {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
-  border-radius: 12px;
-}
-
-.creative-intro {
+.programs {
   background-color: #f8f6f4;
-  border-radius: 16px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 2rem auto;
+  border-radius: 16px;
   padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-.logo-grid img {
-  max-width: 100px;     /* Begræns størrelsen */
-  height: auto;
-  border-radius: 12px;  /* Runde hjørner */
-  object-fit: contain;
-  transition: transform 0.3s ease;
+
+.programs__heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3b3535;
 }
 
-.intro-indhold {
+.programs__grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   align-items: center;
 }
 
-.creative-intro {
-  background-color: #f8f6f4;
+.programs__logo {
+  width: 120px;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 2rem auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.programs__logo:hover {
+  transform: scale(1.05);
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.intro {
+  background-color: #f8f6f4;
   padding: 2rem;
-  text-align: center;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.intro__image {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .creative-billed {
@@ -332,31 +352,73 @@ textarea {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem; /* luft mellem billede og knap */
+  margin-bottom: 2rem;
 }
 
-/* --- STOR SKÆRM (TABLET + DESKTOP) --- */
-@media (min-width: 768px) {
-  .project-card {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
+/* ----------- Mobil (under 768px) ----------- */
+@media (max-width: 768px) {
+  .project__images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project__images img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .intro__content {
     padding: 1rem;
   }
 
-  .project-images {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-    gap: 0.75rem;
-    max-width: 640px;
-    width: 100%;
-    justify-items: center;
-    align-items: start;
-    margin-top: 0.5rem;
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #3b3535;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    z-index: 1000;
   }
 
-  .project-images a {
-    width: 100%;
+  .menu.show {
+    display: flex;
+  }
+
+  .burger {
     display: block;
   }
 }
+/* ----------- Desktop (fra 769px og op) ----------- */
+@media (min-width: 769px) {
+  .project__images {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
 
+  .project__images img {
+    max-width: 280px;
+    height: auto;
+  }
+
+  .intro__content {
+    padding: 2rem;
+
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    width: auto;
+  }
+}
