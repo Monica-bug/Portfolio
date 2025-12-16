@@ -92,8 +92,7 @@ main {
  padding-bottom: 1em;
 }
 
-.intro,
-.projekter {
+.intro {
   background-color: #ececf4;
   padding: 1em;
   margin: 1em auto;
@@ -161,46 +160,42 @@ nav {
   cursor: pointer;
 }
 
-.project-grid {
+.projects {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.project-card {
+.project {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   background-color: #f8f6f4;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;
 }
 
-.project-images {
-  display: grid;
-  grid-template-columns: 1fr; /* ét billede pr. række på mobil */
-  gap: 0.75rem;
-  justify-items: center;
+.project__overlay {
+  text-align: left;
 }
 
-.project-images img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain;
-}
-
-.project-overlay {
+.project__images {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  text-align: left;
-  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.project__images img {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 form {
@@ -230,22 +225,30 @@ textarea {
   border-radius: 8px;
 }
 
-
-button {
-  background-color: #8b3670;
-  color: #f8f6f4;
-  padding: 0.7em 1.5em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
+  cursor: pointer;
+  border: none;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
+.button--primary {
+  background-color: #5b2a3a;
+  color: #fff;
+}
+
+.button--primary:hover {
   background-color: #76384f;
-  color: #f8f6f4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .billed-container {
@@ -259,7 +262,7 @@ button:hover {
   justify-content: center;
 }
 
-.om-mig-indhold {
+.om-mig__indhold {
   display: flex;
   flex-direction: column; /* Mobil først */
   align-items: center;
@@ -272,55 +275,38 @@ button:hover {
   background-color: #f8f6f4;
 }
 
-.om-mig-indhold img {
+.om-mig__indhold img {
   max-width: 200px;
   border-radius: 8px;
 }
 
-.cta-knap {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #5b2a3a;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-align: center;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-knap:hover {
-  background-color: #76384f;
-  color: #f8f6f4;  
-}
-
-.program-logoer {
-  background-color: #fff;        
-  border-radius: 12px;           
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-  padding: 2rem;
-  margin: 2rem auto;
-  text-align: center;
-  max-width: 1000px;
-  width: 90%;
-}
-
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.logo-grid img {
-  max-width: 160px;
+.intro__image {
+  width: 100%;
   height: auto;
+  border-radius: 8px;
+}
+.intro__content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.creative-intro {
+  background-color: #f8f6f4;
+  border-radius: 16px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+.logo-grid img {
+  max-width: 100px;     /* Begræns størrelsen */
+  height: auto;
+  border-radius: 12px;  /* Runde hjørner */
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -374,40 +360,3 @@ button:hover {
   }
 }
 
-/* --- MOBIL (MAX 768PX) --- */
-@media (max-width: 768px) {
-
-  /* mindre logo */
-  .logo img {
-    height: 40px;
-    margin-left: 10px;
-  }
-
-  /* burger vises */
-  .burger {
-    display: block;
-  }
-
-  /* mobil-menu skjult */
-  .menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background-color: #3b3535;
-    padding: 1rem;
-    width: 200px;
-    z-index: 9999;
-  }
-
-  .menu.show {
-    display: flex;
-  }
-
-  /* navbar layout til mobil */
-  .navbar {
-    padding: 0.5em 1em;
-    height: auto;
-  }
-}
