@@ -365,8 +365,7 @@ textarea {
   }
 
   .project__images img {
-    width: 100%;
-    max-width: 600;
+    width: 90%;
     height: auto;
   }
 
@@ -417,7 +416,7 @@ textarea {
   }
 
   .menu {
-    display: flex !important;
+    display: flex;
     position: static;
     flex-direction: row;
     background: none;
